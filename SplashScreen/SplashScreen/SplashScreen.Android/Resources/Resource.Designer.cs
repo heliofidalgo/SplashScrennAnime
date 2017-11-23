@@ -54,6 +54,9 @@ namespace SplashScreen.Droid
             private Layout()
             {
             }
+
+            public static int Tabbar { get; set; }
+            public static int Toolbar { get; set; }
         }
 
         public partial class String

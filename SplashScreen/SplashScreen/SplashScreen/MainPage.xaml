@@ -3,11 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SplashScreen"
              x:Class="SplashScreen.MainPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid>
+        <Label Text="Bem vindo ao NEUTRON" VerticalOptions="Center" HorizontalOptions="Center" />
+        <!-- Acima desse codigo log abaixo fica a tela inicial do app -->
+
+        <Grid x:Name="SplashGrid" BackgroundColor="#ff3498db">
+            <Image x:Name="Logo" source="icon.png" HorizontalOptions="Center" VerticalOptions="Center">
+                <Image.TranslationY>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS">0</On>
+                        <On Platform="Android">-12</On>
+                    </OnPlatform>
+                </Image.TranslationY>
+            </Image>
+        </Grid>
+    </Grid>
 </ContentPage>
